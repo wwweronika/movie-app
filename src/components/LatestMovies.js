@@ -7,18 +7,18 @@ class LatestMovies extends React.Component {
         this.state = {
             error: null,
             isLoaded: false,
-            results: []
+            items: []
         };
     }
 
     componentDidMount() {
-        fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=209402caaff287b05211145603cb9851&language=pl&page=1")
+        fetch("https://api.themoviedb.org/3/list/102621?api_key=209402caaff287b05211145603cb9851&language=pl")
             .then(res => res.json())
             .then(
-                (result) => {
+                (item) => {
                     this.setState({
                         isLoaded: true,
-                        results: result.results
+                        items: item.items,
                     });
                 },
                 (error) => {
@@ -31,7 +31,7 @@ class LatestMovies extends React.Component {
     }
 
     render() {
-        const { error, isLoaded, results } = this.state;
+        const { error, isLoaded, items } = this.state;
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -39,13 +39,13 @@ class LatestMovies extends React.Component {
         } else {
             return (
                 <div className="flexcard">
-                {results.map(result => (
-            <div className="ui card">
+                {items.map(item => (
+                    <div className="ui card" style={{ backgroundColor: 'black'}}>
                 <p className="image">
-                    <img src={`https://image.tmdb.org/t/p/w500/${result.poster_path}`} key={result.title} alt="poster"/>
+                    <img src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} key={item.title} alt="poster"/>
                         </p>
-                    <div className="content">
-                        <p className="header" href="#" key={result.title}> {result.title} </p>
+                    <div className="content" style={{backgroundColor: 'black'}}>
+                        <p className="header" style={{color: 'white'}} href="#" key={item.title}> {item.title} </p>
                     </div>
             </div>
             ))}
