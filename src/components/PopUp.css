@@ -1,0 +1,9 @@
+.buttonExit {
+    flex: inline !important;
+    align-items: center !important;
+    cursor: pointer;
+}
+
+.aa {
+    height: 15px;
+}
