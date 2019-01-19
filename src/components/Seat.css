@@ -1,0 +1,14 @@
+
+.seat {
+    background-color: #1d961d;
+    margin: 1px;
+    
+}
+
+.seat:hover {
+    background-color: #0b740b;
+}
+
+.left ,.right {
+    margin-top: 100px;
+}
