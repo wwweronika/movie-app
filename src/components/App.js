@@ -1,11 +1,11 @@
 import React from 'react';
 
-import ReservationForm from './Form';
+import ShowForm from 'Modal';
 
 const App = () => {
     return (
 <div className = "ui container">
-    <ReservationForm />
+    <ShowForm />
 </div>
     )
 }

@@ -29,7 +29,7 @@ const FormFirstPage = props => {
       label="E-mail" />
 
       <div style={{textAlign:"center"}}>
-        <button type="submit" className="next" style={{width:"150px", height:"30px"}}>
+        <button type="submit" className="next" style={{width:"300px", height:"50px", marginTop:"30px"}}>
           Dalej
         </button>
       </div>

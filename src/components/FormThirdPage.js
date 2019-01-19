@@ -50,10 +50,10 @@ const FormThirdPage = props => {
       </div>
 
       <div style={{textAlign:"center"}}>
-        <button type="button" className="previous" onClick={previousPage} style={{width:"150px", height:"30px"}}>
+        <button type="button" className="previous" onClick={previousPage} style={{width:"300px", height:"50px", marginTop:"30px"}}>
           Wstecz
         </button>
-        <button type="submit" style={{width:"150px", height:"30px"}} disabled={pristine || submitting}>
+        <button type="submit" style={{width:"300px", height:"50px", marginTop:"30px"}} disabled={pristine || submitting}>
             Rezerwuj!
         </button>
       </div>
