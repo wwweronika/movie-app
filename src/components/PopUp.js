@@ -15,6 +15,7 @@ class PopUp extends React.Component {
             runtime: 0,
             grade: 0.0,
             popularity: 0,
+            adult: " w każdym wieku",
             producer: ""
         };
         this.toggleModal = this.toggleModal.bind(this);
@@ -42,11 +43,24 @@ class PopUp extends React.Component {
                         producer: "Not yet well-known company"
                     });
                     }
+                    else if(item.adult===1){
+                        this.setState({
+                            desc: item.genres[0].name,
+                            budget: item.budget,
+                            runtime: item.runtime,
+                            grade: item.vote_average,
+                            popularity: item.popularity,
+                            adult: "dorosłych",
+                            producer: item.production_companies[0].name
+                        });
+                    }
                     else{
                         this.setState({
                             desc: item.genres[0].name,
                             budget: item.budget,
                             runtime: item.runtime,
+                            grade: item.vote_average,
+                            popularity: item.popularity,
                             producer: item.production_companies[0].name
                         });
                     }
@@ -71,26 +85,27 @@ class PopUp extends React.Component {
                         <VideoDetail video = {item} />
                     </div> 
                     <div className = "column" >
-                        <h4 className = "header" style = {{ fontSize: 24}} > { item.title } </h4>
+                        <h4 className = "header"style = {{fontSize: 26, fontFamily: "'Comic Sans MS',cursive,sans-serif"}} > {item.title } </h4>
+                        <div className = "aa"></div>
                         <div className = "meta" >
                             <span className = "infos" > 
                                 <i aria hidden = "true" className = "calendar alternate outline icon" > </i> Data premiery: {item.release_date}
                                 <p></p>
                                 <i aria hidden = "true" className = "film icon" > </i> Gatunek filmu: {this.state.desc}
-                                <p className = "aa"></p>
-                                <i aria hidden = "true" className = "film icon" > </i> Gatunek filmu: {this.state.desc} 
-                                <p className = "aa" > </p>
-                                <i aria hidden = "true" className = "hourglass outline icon" > </i> Czas trwania: {this.state.runtime} 
-                                <p className = "aa" > </p>
+                                <p className = "aaa"></p>
+                                <i aria hidden = "true" className = "child icon" > </i> Film dla widzów {this.state.adult} 
+                                <p className = "aaa" > </p>
+                                <i aria hidden = "true" className = "hourglass outline icon" > </i> Czas trwania: {this.state.runtime} (min)
+                                <p className = "aaa" > </p>
                                 <i aria hidden = "true" className = "hand peace outline icon" > </i> Ocena filmu: {this.state.grade} 
-                                <p className = "aa" > </p>
+                                <p className = "aaa" > </p>
                                 <i aria hidden = "true" className = "chart line icon" > </i> Popularność filmu: {this.state.popularity} 
-                                <p className = "aa" > a </p>
+                                <div className = "aa" >  </div>
                             </span>
                         </div>  
                         <div className = "description" > 
-                            <span className = "description2" > {item.overview} </span>
-                            <p className = "aa">a</p>
+                            <span className = "description2" style = {{ textAlign: "justify" }}> {item.overview} </span>
+                            <div className = "aa"> </div>
                         </div>
                         <div className="extra">
                             <button className = "ui primary right floated button " > Make a reservation <i aria-hidden = "true" class = "right chevron icon " > </i></button>
@@ -104,8 +119,8 @@ class PopUp extends React.Component {
                     </div>
                 </div>
             </div>
-            <div className="button-exit" >
-                <button className = "ui negative button" onClick = {this.toggleModal} > Go back to film list </button>
+             <div className = "button-segment" >
+                <button className = "butt ui negative button" onClick = {this.toggleModal} style = {{ marginLeft: "87.15%" }}> Go back to film list <i aria-hidden = "true" class = "right chevron icon " > </i></button>
             </div>
         </div>
         );
