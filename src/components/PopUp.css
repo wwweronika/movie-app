@@ -1,0 +1,9 @@
+.button-exit {
+    flex: inline !important;
+    align-items: center !important;
+    cursor: pointer;
+}
+
+.aa {
+    color: white;
+}

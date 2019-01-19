@@ -1,0 +1,11 @@
+.flexcard {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #202020;
+}
+
+.image:hover {
+    width: 115%;
+    height: auto;
+    z-index: 10;
+}
