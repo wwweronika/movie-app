@@ -1,12 +1,12 @@
 import React from 'react';
-import ModalButton from './ModalButton';
+import ButtonZoom from './Buttons';
 
 const App = () => {
 return (
     
     <div className="ui container">
        
-       <ModalButton />
+       <ButtonZoom />
     
     </div>
 );
