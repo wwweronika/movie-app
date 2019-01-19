@@ -1,15 +1,14 @@
 import React from 'react';
-import MainForm from './Form';
+
+import ReservationForm from './Form';
 
 const App = () => {
-return (
-    
-    <div className="ui container">
-       
-       <MainForm />
-    
-    </div>
-);
-};
+    return (
+<div className = "ui container">
+    <ReservationForm />
+</div>
+    )
+}
 
 export default App;
+
