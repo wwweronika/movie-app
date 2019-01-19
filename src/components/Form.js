@@ -11,6 +11,7 @@ import green from '@material-ui/core/colors/green';
 import ControlledOpenSelectHour from './Hour';
 import ControlledOpenSelectDay from './Day';
 import Data from './Data';
+import MainButton from './Button';
 
 //Data, godzina, sala, dane
 
@@ -90,7 +91,7 @@ class MainForm extends React.Component {
         >
           <TabContainer dir={theme.direction}><ControlledOpenSelectHour  /> <ControlledOpenSelectDay /> </TabContainer>
           <TabContainer dir={theme.direction}>Tutaj będzie widok sali kinowej, który robi Michał</TabContainer>
-          <TabContainer dir={theme.direction}><Data /></TabContainer>
+          <TabContainer dir={theme.direction}><Data /> <MainButton /> </TabContainer>
         </SwipeableViews>
         
       </div>

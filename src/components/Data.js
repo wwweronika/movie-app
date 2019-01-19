@@ -42,9 +42,9 @@ class Data extends React.Component {
                 <label htmlFor="email" style={{fontSize:"20px"}}>Podaj e-mail</label>
                 <input id="email" name="email"  type="email" />
                 
-                <div style={{textAlign:'center'}}>
+                {/* <div style={{textAlign:'center'}}>
                     <button type="submit" style={{backgroundColor:'#CC6666', width:'40%', height:'50px', fontSize:"30px"}}>REZERWUJ!</button>
-                </div>
+                </div> */}
 
              </form>
         </div>
