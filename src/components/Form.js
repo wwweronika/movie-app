@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import FormFirstPage from './FormFirstPage'
-import FormSecondPage from './FormSecondPage'
+//import FormSecondPage from './FormSecondPage'
 import FormThirdPage from './FormThirdPage'
 
 class ReservationForm extends Component {
@@ -29,13 +29,13 @@ class ReservationForm extends Component {
     return (
       <div className="ui form">
         {page === 1 && <FormFirstPage onSubmit={this.nextPage} />}
-        {page === 2 && (
+        {/* {page === 2 && (
           <FormSecondPage
             previousPage={this.previousPage}
             onSubmit={this.nextPage}
           />
-        )}
-        {page === 3 && (
+        )} */}
+        {page === 2 && (
           <FormThirdPage
             previousPage={this.previousPage}
             onSubmit={onSubmit}
