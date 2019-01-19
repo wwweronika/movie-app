@@ -1,12 +1,12 @@
 import React from 'react';
-import ButtonZoom from './Buttons';
+import MainForm from './Form';
 
 const App = () => {
 return (
     
     <div className="ui container">
        
-       <ButtonZoom />
+       <MainForm />
     
     </div>
 );
